@@ -73,7 +73,8 @@ The wireframe and decision flow chart developed by the team prior to coding to g
 ![Screenshot of App Homepage](./client/src/Images/homescreenshot.png)
 ![Screenshot of Game Search Page](./client/src/Images/searchscreenshot.png)
 ![Screenshot of Game Page](./client/src/Images/game.png)
-![Screenshot of Game Page](./client/src/Images/profile.png)
+![Screenshot of Profile Page](./client/src/Images/profile.png)
+![Screenshot of Find Friends Page](./client/src/Images/findfriends.png)
 
 ![Screenshot of Login Page](./client/src/Images/mobile2.png)
 ![Screenshot of Profile Page](./client/src/Images/mobile3.png)
