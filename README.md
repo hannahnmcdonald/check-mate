@@ -8,6 +8,8 @@ Welcome to Check Mate!
 
 Board games provide the opportunity for nearly endless entertainment, able to bring people of all ages together.  And this app is not about that.  Check Mate offers you the opportunity to track your wins and losses, compare your stats to your friend group, find out who has the best winning history for any game in question.  This provides you the opportunity to identify your greatest threats and attempt to partner with the strongest players at any particular game in order to crush and defeat your friends and family.  In the event that humiliating the other players in your gaming group becomes repetitive, users also have the opportunity to submit and review user submitted ruleset variations to add more enjoyability to replaying your favorite games.  
 
+🎲 Experience Check Mate [here](https://check-mate-game-app.herokuapp.com/)
+
 
 ## Table of Contents
 
