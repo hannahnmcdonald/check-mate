@@ -117,4 +117,4 @@ If you would like, you can connect with any of the creators through their github
 
 ## <a id="sample"></a>Link to Heroku Deployment
 
-- [Experience Check Mate for Yourself](https://checkmate-game-app.herokuapp.com/)
+- [Experience Check Mate for Yourself](https://check-mate-game-app.herokuapp.com/)
