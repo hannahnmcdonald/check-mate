@@ -25,7 +25,6 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Logout from '@mui/icons-material/Logout';
 import randomColor from "../utils/randomColor";
-// import { colors } from "@material-ui/core";
 import Auth from '../utils/auth';
 
 const MyLink = styled(Link)(({ theme }) => ({
@@ -57,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Quicksand',
     fontWeight: 600,
     align: 'right',
-    // padding: '5px',
     marginRight: theme.spacing(10),
     "&:hover": {
       color: "#61AE24",
@@ -102,10 +100,6 @@ function Navbar() {
                   <Link to="/searchgames" className={classes.link}>
                   Search Games
                   </Link> 
-                {/* </div> */}
-              
-                
-                {/* </div> */}
                 <React.Fragment>
                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                   <Tooltip title="Account settings">
@@ -180,11 +174,9 @@ function Navbar() {
                   Login
                 </Link>
                 }
-            {/* </div> */}
           </Grid>
           </>
         )}
-        
       </Toolbar>
     </AppBar>
   );

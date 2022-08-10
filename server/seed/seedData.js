@@ -19,7 +19,6 @@ db.once('open', async () => {
             };
             users.push(user);
       }
-      // await User.insertMany(users);
       User.create(users);
       console.log(users);
       console.log(`${process.argv[2]} Users seeded!`);

@@ -42,35 +42,6 @@ const MyCard = styled(Card)(({ theme }) => ({
     background: randomColor(colors), 
 })); 
 
-// const myFriends = [
-//     {
-//         name: "Amanda", 
-//         initial: "A", 
-//     }, 
-//     {
-//         name: "Chris", 
-//         initial: "C", 
-//     }, 
-//     {
-//         name: "Hannah", 
-//         initial: "H", 
-//     }, 
-//     {
-//         name: "Ben", 
-//         initial: "B", 
-//     }, 
-//     {
-//         name: "Luke", 
-//         initial: "L", 
-//     }, 
-//     {
-//         name: "Daniel", 
-//         initial: "D", 
-//     }, 
-
-// ]
-
-
 export default function Friends() {
 
     const [searchedFriend, setSearchedFriend] = useState('');
@@ -97,15 +68,7 @@ export default function Friends() {
         if (data) {
             setSearchResults(data.findFriends);
         }
-        // console.log(data);
     }, [data]);
-
-    // useEffect(() => {
-    //     if(!data) {
-    //         return;
-    //     }
-    //     console.log(friendId);
-    // }, [friendId]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -115,7 +78,6 @@ export default function Friends() {
           return false;
         }
             await setSearchResults(data.findFriends);
-            // console.log(data.findFriends[0].firstName);
     };
     
     const [friendId, setFriendId] = useState();
@@ -133,10 +95,8 @@ export default function Friends() {
     event.preventDefault();
     let currentFriendId = event.target.id;
     setFriendId(currentFriendId);
-    // console.log("Before Add Friend Mutation: " + friendId);
     if(friendId) {
     await addFriend(friendId);
-    // console.log("Friend ID of friend to add: " + friendId);
     }
     return;    
 }
@@ -147,20 +107,15 @@ export default function Friends() {
         <Grid container 
             sx={{ 
                 justifyContent:'center', 
-                // padding: '20px', 
                 color: '#ffffff', 
                 borderRadius: 0 
             }}>      
             <Grid item xs={12} align="center"
                 sx={{ 
-                    // display: 'flex', 
-                    // justifyContent: 'center', 
-                    // textAlign: 'center',  
                     backgroundImage: `url(${Image})`, 
                     backgroundRepeat: 'no-repeat', 
                     backgroundSize: 'cover', 
                     padding: "10px", 
-                    // borderRadius: 3, 
                     minHeight: 360
                 }}>
                 <Grid container>
@@ -177,7 +132,6 @@ export default function Friends() {
                                 <TextField
                                     required
                                     name="search"
-                                    // value={searchInput}
                                     onChange={(e) => setSearchedFriend(e.target.value)}
                                     value={searchedFriend}
                                     type="text"
@@ -197,8 +151,6 @@ export default function Friends() {
     <Grid container spacing={2} align="center" sx={{ p:2, justifyContent: 'center', display: 'flex'}}>
         {searchResults ? (
             searchResults.map((friend, index) => (
-        // <Grid>
-            // <Grid container spacing={2} align="center" sx={{ p:2, justifyContent: 'center', display: 'flex'}}>
                 <Grid item xs={12} sm={8} md={6} lg={4} xl={2} key={index}>
                     <MyCard>
                         <CardContent>
@@ -217,8 +169,6 @@ export default function Friends() {
                 <FriendBox /> 
             </Grid>
         </Grid>
-{/* {selectedFriendData ? (  
-    ) : null} */}
     </>
     )
 }; 

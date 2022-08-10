@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NotFound from './pages/NotFound';
@@ -12,14 +11,9 @@ import AltRulesComp from './components/AltRulesComp';
 import Homepage from "./pages/Homepage";
 import Friends from './pages/Friends';
 import SearchGames from "./pages/SearchGames";
-
-// import GameSearch from "./components/GameSearch";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./Theme/Theme";
-
 import FunFact from "./components/FactArray";
-// import AltRules from "./pages/AltRules";
-// import { withRouter } from 'react-router-dom';
 import Profile from "./pages/Profile"
 
 import {
@@ -70,7 +64,6 @@ function App() {
 								<Route path="/altrules" element={<AltRules/>}/>
 								<Route path="/altrulescomp" element={<AltRulesComp/>}/>
 								<Route path="/friends" element={<Friends/>}/>
-								{/* <Route path="/startmatch" element={<StartMatch/>}/> */}
 								<Route path="*" element={<NotFound/>}/>
 							</Routes>
 							

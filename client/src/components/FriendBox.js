@@ -78,10 +78,6 @@ const FriendBox = (props) => {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
-    // useEffect(() => {
-    //     randomColor(colors); 
-    // }, []);
-
     return (
         <StyledFriendBox>
             <CardContent>

@@ -1,9 +1,7 @@
 import React from 'react'
 import Autocomplete from '@mui/material/Autocomplete';
-// import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-// import Typography from '@mui/material/Typography';
 import SubmitBtn from './SubmitBtn';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
@@ -23,7 +21,6 @@ const MyTextField = styled(TextField)(({ theme }) => ({
 })); 
 
 const Play = () => {
-    // const [friends, setFriends] = useState(" "); 
 
     const friends = [
         {name: "Amanda"}, 

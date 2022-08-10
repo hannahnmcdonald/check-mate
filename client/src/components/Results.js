@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useMutation } from '@apollo/client';
 import Checkbox from '@mui/material/Checkbox';
-// import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
@@ -12,7 +11,6 @@ import { Typography, TextField, Card } from '@mui/material';
 import { ADD_WIN, ADD_LOSS, ADD_TIE } from '../utils/mutations'
 import SubmitBtn from './SubmitBtn';
 import { Link } from 'react-router-dom';
-// import  { Grid }  from '@mui/material';
 import Button from '@mui/material/Button';
 
 import { useQuery } from '@apollo/client';
@@ -46,14 +44,6 @@ const RulesBtn = styled(Button)(({ theme }) => ({
       opacity: .8, 
     }
 })); 
-  
-// const friends = [
-//     {firstName: "Amanda"}, 
-//     {firstName: "Hannah"}, 
-//     {firstName: "Ben"}, 
-//     {firstName: "Luke"}, 
-//     {firstName: "Daniel"},
-// ]
 
 const Results = (props) => {
     // + State variable to hold a user's friends, and the Query to get all friends of the logged in user
@@ -125,8 +115,6 @@ const Results = (props) => {
         onCompleted: () => console.log('Losses have been submitted to the database!') 
     });
 
-
-
   const handlePlayAgain = (event) => {
         event.preventDefault(); 
         console.log("This button should take you back to Choose Teammates / Play component"); 
@@ -164,7 +152,6 @@ const Results = (props) => {
     return (
         <Stack spacing={3} 
           sx={{display: 'flex', alignContent: 'center', flexWrap: 'wrap', textAlign: 'center', flexDirection: 'column'}}>
-                {/* TO DO: Change Trophy Size */}
             <EmojiEventsIcon sx={{fontSize:80, color:'gold', alignSelf:'center'}}/>
             <Typography variant="h5" sx={{p: 1}}>Choose Your Winners</Typography>
             <Autocomplete

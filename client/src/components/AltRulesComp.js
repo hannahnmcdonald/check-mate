@@ -64,15 +64,12 @@ const AltRulesComp = (props) => {
                         <form onSubmit={handleRulesFormSubmit}>
                             <Grid container>
                             <Grid item xs={12} sx={{}}>
-                                {/* {selectedIndex.length ? ( */}
                                     <Typography variant="body2" align="center" sx={{}}>
                                         Enter your own rule modifications by entering a name for the ruleset and then its description.
                                     </Typography>
-                             {/* ) : null} */}
                             </Grid>
 
                             <Grid item xs={12} sx={{ width: 400, maxWidth: '100%', ml:1, mr: 1, mt:1, mb:1, }}>
-                                {/* {selectedIndex.length ? (  */}
                                 <TextField
                                     name="altRulesName"
                                     value={altRulesName}
@@ -80,11 +77,9 @@ const AltRulesComp = (props) => {
                                     label="New Rule Set Name" 
                                     id="altRuleName"
                                 />
-                                 {/* ) : null}                         */}
                             </Grid>
 
                             <Grid item xs={12} sx={{ width: 500, maxWidth: '100%',ml:1, mr: 1, mt:1, mb:1,  }}>
-                                {/* {selectedIndex.length ? (  */}
                                 <TextField
                                     name="altRules"
                                     value={altRules}
@@ -95,15 +90,12 @@ const AltRulesComp = (props) => {
                                     label="New Rule Set" 
                                     id="altRuleDesc"
                                 />
-                              {/* ) : null}                         */}
                             </Grid>
                             </Grid>
                         
 
                             <Grid item xs={12} sx={{ mb:2, textAlign: 'center'}}>
-                                {/* {selectedIndex.length ? (  */}
                                     <Button type="submit" variant="contained">Submit</Button>
-                                {/* ) : null} */}
                             </Grid>
                         </form>
                         </Grid>

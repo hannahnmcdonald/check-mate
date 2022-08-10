@@ -287,9 +287,6 @@ const SearchGames = () => {
               image={selectedGameData[0].image_url}
               alt="Board game box cover"
             />
-            {/* <Typography variant="h4" gutterBottom sx={{marginTop: 5}}>
-            {selectedGameData[0].gameName}
-            </Typography> */}
           </CardContent>
         </MyCard>
       </Grid>
@@ -322,15 +319,6 @@ const SearchGames = () => {
               </Typography>
               </Stack>
 
-              {/* THIS PLAY CLICK BUTTON SWITCHED THE GAME RESULTS ON OR OFF ITS BEEN MOVED UNDER A TAB AT THE MOMENT */}
-              {/* <Stack direction= "row" sx={{justifyContent: 'center', p: 5}}>
-
-                <SubmitBtn size= 'large' sx={{minWidth: 100}} onClick={(event) => handlePlayClick()}>{(play === 0) ? 'Play!' : "OR DON'T!"}</SubmitBtn>
-
-              </Stack> */}
-            {/* {selectedGameData[0].officialUrl ? ( 
-              <Button href= {selectedGameData[0].officialUrl} target="_blank" variant="contained">Game Site</Button>
-            ) : null} */}
           </TabPanel>
           <TabPanel value={value} index={1}>
             {selectedGameData[0].officialUrl ? ( 
@@ -380,18 +368,6 @@ const SearchGames = () => {
       </Grid>
   </Grid>      
   ) : null}
-
-
-{/* { (play === 1) ?
-  <Play />
-  : null } */}
-
-{/* { (play === 1) ?
-  <Results gameName={selectedGameData[0].gameName} gameId={selectedGameData[0].gameId}/>
-  : null } */}
-
-
-
     </>
   );
 };

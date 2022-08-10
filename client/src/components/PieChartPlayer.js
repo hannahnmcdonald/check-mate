@@ -27,7 +27,6 @@ const PieChartPlayer = (props) => {
                             labelPosition={70}
                             labelStyle={{
                                 fill: '#fff',
-                                // opacity: 0.75,
                                 pointerEvents: 'none',
                                 fontSize: '3px',
                                 fontFamily: 'sans-serif',

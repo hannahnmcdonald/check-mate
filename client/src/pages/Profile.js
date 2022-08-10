@@ -6,9 +6,7 @@ import { styled } from '@mui/system';
 import  { Grid }  from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-// Import the useQuery and useMutation hooks
 import { useQuery } from '@apollo/client';
-// // Import the USER_INFO query
 import { USER_INFO } from '../utils/queries'
 import FriendBox from '../components/FriendBox';
 import PieChartPlayer from '../components/PieChartPlayer';
@@ -49,70 +47,27 @@ export default function Profile() {
     }
 
 	const userInfo = data ? data.userInfo : { };
-    //console.log("userInfo: ", userInfo);
   
     const { firstName } = data ? data.userInfo : { firstName: "Player" };
     const { wins } = data ? data.userInfo : { wins: [{ wins: 0 }] };
     const { losses } = data ? data.userInfo : { losses: [{ losses: 0 }] };
     const { ties } = data ? data.userInfo : { ties: [{ ties: 0 }] };
     
-    // console.log("wins: ", ...wins);
-    // console.log("losses: ", ...losses);
-    // console.log("ties: ", ...ties);
-
     let winsArray = [...wins]
-    //console.log("winsArray: ", winsArray);
     const countWins = winsArray.map(item => item.wins).reduce((prev, curr) => prev + curr, 0);
-    //console.log("countWins:", countWins);
 
     let lossesArray = [...losses]
-    //console.log("lossesArray: ", lossesArray);
     const countLosses = lossesArray.map(item => item.losses).reduce((prev, curr) => prev + curr, 0);
-    //console.log(countLosses);
     
     let tiesArray = [...ties]
-    //console.log("tiesArray: ", tiesArray);
     const countTies = tiesArray.map(item => item.ties).reduce((prev, curr) => prev + curr, 0);
-    //console.log(countTies);
     
-    // setWins(countWins);
-    // console.log("userInfo: ", userInfo);
     const handleWins = (wins) => {
-        // let gameWins = Object.values(wins);
-        // console.log("gameWins: ", gameWins);
         let winsArray = [...wins];
         const countWins = winsArray.map(item => item.wins).reduce((prev, curr) => prev + curr, 0);
-        //console.log(countWins);
         setWins(countWins);
     }
-    // console.log("gameWins Length: ", gameWins.length);
-    // setWins(gameWins);
     
-    // handleWins(wins);
-
-    // useEffect(() => {        
-    //     handleWins(wins);
-    // },[wins]);
-
-    // useEffect(() => {        
-    //     getUserInfo();
-    // });
-    
-    // const getUserInfo = () => {
-    //     console.log("userInfo: ", userInfo);
-    //     let gameWins = userInfo.wins.map(w => w.wins).reduce((prev, curr) => prev + curr, 0);
-    //     console.log("gameWins: ", gameWins);
-    //     setWins(gameWins);
-    //     // setWins(userInfo.wins[0].wins);
-    // }
-
-    //console.log(userInfo);
-
-    // const handlePageChange = (event, newPage) => {
-    //     setPage(newPage); 
-    //     console.log(event.target); 
-    // }
-
     /////////////////////Start of Ben messing around in here////////////////////////
     
     const favoriteGame = () => {
@@ -124,7 +79,6 @@ export default function Profile() {
         //Win array iteration
         for (let i=0; i <winsArray.length; i++) {
             currentKey = winsArray[i].game;
-            // console.log("currentKey: ", currentKey);
             if (favoriteGameObj[currentKey] === undefined){
                 favoriteGameObj[currentKey] = 1;
             } else {
@@ -133,10 +87,8 @@ export default function Profile() {
         }
 
         //Lose array iteration i and j are in use, go with k 
-
         for (let k=0; k <lossesArray.length; k++) {
             currentKey = lossesArray[k].game;
-            // console.log("currentKey: ", currentKey);
             if (favoriteGameObj[currentKey] === undefined){
                 favoriteGameObj[currentKey] = 1;
             } else {
@@ -145,10 +97,8 @@ export default function Profile() {
         }
 
         //Tie array iteration i and j and k are in use, go with l
-
         for (let l=0; l <tiesArray.length; l++) {
             currentKey = tiesArray[l].game;
-            // console.log("currentKey: ", currentKey);
             if (favoriteGameObj[currentKey] === undefined){
                 favoriteGameObj[currentKey] = 1;
             } else {
@@ -262,7 +212,6 @@ export default function Profile() {
     const careerPercentWins = (Math.trunc((winsArray.length/ totalGamesPlayed) * 100));
 
     ///////////////////End of Ben messing around in here?//////////////////////////
-
 
     return (
     <Grid container spacing={2}>

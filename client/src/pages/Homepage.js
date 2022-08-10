@@ -5,9 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/system';
-// import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-// import tm from '../Images/terraformingmars.png'
-// import { Container } from '@mui/material';
 import  { Grid }  from '@mui/material';
 import randomColor from '../utils/randomColor'; 
 

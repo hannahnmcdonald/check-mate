@@ -27,13 +27,7 @@ const resolvers = {
         const userData = await User.find({}).select('-__v -password');
         return userData;
       },
-    // getFriends: async (parent, args, context) => {
-    //   if (context.user) {
-    //     const userData = await User.find({ _id: context.user._id }).select('-__v -password');
 
-    //     return userData.friends;
-    //   }
-    // },
     findFriends: async (parent, args, context) => {
     const { search = ""} = args;
 
@@ -137,33 +131,7 @@ const resolvers = {
       return  altrules ;
 
     },
-    // saveWin: async (parent, { winData }, context) => {
-    //   if (context.user) {
-    //     const updatedUser = await User.findByIdAndUpdate(
-    //       { _id: context.user._id },
-    //       { $push: { wins: winData } },
-    //       { new: true }
-    //     );
-
-    //     return updatedUser;
-    //   }
-    // }
-
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
-    // removeBook: async (parent, { bookId }, context) => {
-    //   if (context.user) {
-    //     const updatedUser = await User.findOneAndUpdate(
-    //       { _id: context.user._id },
-    //       { $pull: { savedBooks: { bookId } } },
-    //       { new: true }
-    //     );
-
-    //     return updatedUser;
-    //   }
-
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
+    
   }
 }
 

@@ -45,23 +45,6 @@ function DrawerComponent() {
         onClose={() => setOpenDrawer(false)}
       >
         <List>
-        {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/" className={classes.link}>Home</Link>
-            </ListItemText>
-          </ListItem>
-          <Divider/> */}
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/startmatch" className={classes.link}>Start a Match</Link>
-            </ListItemText>
-          </ListItem> */}
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/login" className={classes.link}>Login/Sign Up</Link>
-            </ListItemText>
-          </ListItem> */}
-          {/* <Divider/> */}
           {Auth.loggedIn() ? (<>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
@@ -91,17 +74,6 @@ function DrawerComponent() {
                   </ListItemText>
                 </ListItem>
                 }
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/login" className={classes.link}>Login/Sign Up</Link>
-            </ListItemText>
-          </ListItem> */}
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/profile" className={classes.link}>Profile</Link>
-            </ListItemText>
-          </ListItem>
-          <Divider/> */}
         </List>
       </Drawer>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)}className={classes.icon}>
