@@ -5,18 +5,15 @@ import { styled } from '@mui/system';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Image from '../Images/gamebackgroundimage.png';
-// import { Link } from "react-router-dom";
 import SubmitBtn from '../components/SubmitBtn'; 
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-// import Play from '../components/Play'; 
 import Results from '../components/Results'; 
 import randomColor from '../utils/randomColor';
 import AltRulesComp from '../components/AltRulesComp';
-// import SubmitBtn from '../components/SubmitBtn';
 import Auth from '../utils/auth';
 
 var colors = ['#00A1CB','#01A4A4','#113F8C','#61AE24','#D0D102','#32742C','#E54028','#F18D05','#D70060'];
@@ -66,34 +63,6 @@ const SearchGames = () => {
     const newArray = searchedGames.filter (item => item.gameId === selectedGameId);
     setSelectedGameData(newArray);
 }
-
-
-// play and handlePlayclick switch a state variable between 1 and 0.  Game results renders conditionally as a result using a ternary operator below in the jsx
-
-// const [ play, setPlay] = useState(0);
-
-// function switchPlay() {
-//   if (play === 1) {
-//     setPlay(0);
-//   } else {
-//     setPlay(1);
-//   }  
-// }
-
-// const handlePlayClick = () => {
-//   if (play === 1) {
-//     setPlay(0);
-//   } else {
-//     setPlay(1);
-//   } 
-// }
-
-  // useEffect(() => {
-  //   if (selectedGameData) {
-  //   console.log("selectedGameData: ", selectedGameData);
-  //   console.log("selectedGameData.gameId: ", selectedGameData[0].gameId)}
-  // }, [selectedGameData]);
-
 
   // create method to search for games and set state on form submit
   const handleGameSearchFormSubmit = async (event) => {
